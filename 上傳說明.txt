@@ -1,0 +1,16 @@
+義光生醫網站上傳步驟
+
+1. 解壓縮 holylight-website.zip
+2. 打開 GitHub 的 holylight-website Repository
+3. 點 Add file
+4. 點 Upload files
+5. 將 index.html、styles.css、README.md 拖曳到上傳區
+6. 頁面下方 Commit changes 保持預設
+7. 點綠色 Commit changes
+8. 完成後進入 Settings → Pages
+9. Source 選 Deploy from a branch
+10. Branch 選 main，資料夾選 /(root)
+11. 點 Save
+
+預計網站網址：
+https://holylightbiomed-oss.github.io/holylight-website/
