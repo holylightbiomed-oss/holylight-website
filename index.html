@@ -3,118 +3,397 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="義光生醫有限公司提供失禁性皮膚炎、傷口清潔與皮膚隔離保護等專業照護產品。">
-  <title>義光生醫有限公司｜Holy Light Biomedical</title>
+  <meta name="theme-color" content="#a51f36">
+  <meta name="description" content="義光生醫有限公司｜專業傷口與皮膚照護解決方案，服務醫院、居家護理與長照機構。">
+  <meta property="og:title" content="義光生醫｜Holy Light Biomedical">
+  <meta property="og:description" content="專業傷口與皮膚照護解決方案">
+  <meta property="og:type" content="website">
+  <title>義光生醫｜專業傷口與皮膚照護解決方案</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
+
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="義光生醫首頁">
-      <span class="brand-mark">HLB</span>
-      <span>
-        <strong>義光生醫</strong>
-        <small>Holy Light Biomedical Co., Ltd.</small>
-      </span>
-    </a>
-    <nav aria-label="主要導覽">
-      <a href="#about">關於我們</a>
-      <a href="#products">產品方案</a>
-      <a href="#care">照護理念</a>
-      <a href="#contact">聯絡我們</a>
-    </nav>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="義光生醫首頁">
+        <img src="assets/hlb-mark.svg" alt="" width="52" height="52">
+        <span class="brand-copy">
+          <strong>義光生醫</strong>
+          <small>HOLY LIGHT BIOMEDICAL</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" aria-label="開啟選單" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="主要導覽">
+        <a href="#about">關於我們</a>
+        <a href="#products">產品方案</a>
+        <a href="#solutions">應用場域</a>
+        <a href="#resources">照護資源</a>
+        <a href="#contact">聯絡我們</a>
+        <a class="nav-cta" href="tel:+886286857190">立即洽詢</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">專業皮膚與傷口照護</p>
-        <h1>讓每一次照護，<br>更溫和、更安心。</h1>
-        <p class="lead">義光生醫專注於失禁性皮膚炎、傷口清潔與皮膚隔離保護，協助醫療與長照團隊建立完整的一站式照護流程。</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#products">瀏覽產品方案</a>
-          <a class="button secondary" href="#contact">聯絡義光生醫</a>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-orb hero-orb-a"></div>
+      <div class="hero-orb hero-orb-b"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="kicker"><span></span> Professional Wound & Skin Care</p>
+          <h1 id="hero-title">
+            專業傷口與皮膚照護
+            <em>從溫和開始</em>
+          </h1>
+          <p class="hero-lead">
+            以臨床需求為核心，提供清潔、乾爽與隔離保護的一站式照護方案，
+            協助醫療、長照與居家照護團隊提升照護品質。
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products">
+              探索產品方案
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn-ghost" href="#contact">聯絡義光生醫</a>
+          </div>
+
+          <div class="hero-trust" aria-label="服務特色">
+            <div><strong>3</strong><span>步驟照護流程</span></div>
+            <div><strong>4+</strong><span>專業應用場域</span></div>
+            <div><strong>1</strong><span>完整導入方案</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1" aria-label="清潔、乾爽、隔離保護照護流程">
+          <div class="visual-shell">
+            <div class="visual-badge">
+              <span>Care System</span>
+              <strong>一站式皮膚照護</strong>
+            </div>
+
+            <div class="care-ring">
+              <div class="ring-center">
+                <img src="assets/hlb-mark.svg" alt="義光生醫品牌標誌">
+              </div>
+              <article class="care-node node-clean">
+                <span>01</span><strong>清潔</strong><small>Clean</small>
+              </article>
+              <article class="care-node node-dry">
+                <span>02</span><strong>乾爽</strong><small>Dry</small>
+              </article>
+              <article class="care-node node-protect">
+                <span>03</span><strong>保護</strong><small>Protect</small>
+              </article>
+            </div>
+
+            <div class="visual-note">
+              <span class="pulse"></span>
+              <p>支持尿布族群、臥床長者與脆弱皮膚照護</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="hero-card" aria-label="照護重點">
-        <span>Clean</span><strong>清潔</strong>
-        <span>Dry</span><strong>乾爽</strong>
-        <span>Protect</span><strong>隔離保護</strong>
+
+      <div class="container hero-footer">
+        <p>服務對象</p>
+        <div class="service-strip">
+          <span>醫院病房</span><i></i>
+          <span>居家護理所</span><i></i>
+          <span>護理之家</span><i></i>
+          <span>長照機構</span>
+        </div>
       </div>
     </section>
 
-    <section class="section intro" id="about">
-      <div>
-        <p class="eyebrow">About Us</p>
-        <h2>以臨床需求為核心的照護夥伴</h2>
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="section-intro reveal">
+          <p class="eyebrow">About Holy Light</p>
+          <h2>陪伴第一線照護者，<br>把複雜流程變得更簡單</h2>
+        </div>
+
+        <div class="about-copy reveal delay-1">
+          <p class="large-copy">
+            義光生醫有限公司致力於引進與推廣專業皮膚及傷口照護產品，
+            從產品選擇、使用流程到教育支援，建立真正適合臨床與長照現場的解決方案。
+          </p>
+          <p>
+            我們重視使用者感受、產品安全與照護效率，期待成為醫院、居家護理所、
+            護理之家與長照機構值得信賴的合作夥伴。
+          </p>
+
+          <div class="value-grid">
+            <article>
+              <span>01</span>
+              <h3>臨床導向</h3>
+              <p>從第一線使用情境出發，重視流程與實際需求。</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>溫和照護</h3>
+              <p>降低不必要的摩擦與刺激，守護脆弱皮膚。</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>教育支援</h3>
+              <p>提供產品說明、照護流程與機構導入協助。</p>
+            </article>
+          </div>
+        </div>
       </div>
-      <p>義光生醫有限公司致力於引進與推廣適合醫院、居家護理所、護理之家、長照機構及居家照護使用的專業產品。我們重視產品安全、照護流程與第一線使用經驗，期待成為醫護團隊可信賴的合作夥伴。</p>
     </section>
 
-    <section class="section" id="products">
-      <div class="section-heading">
-        <p class="eyebrow">Care Solutions</p>
-        <h2>三步驟一站式皮膚照護</h2>
-        <p>針對尿布族群、臥床長者與傷口照護需求，建立清潔、乾爽與隔離保護的完整流程。</p>
-      </div>
+    <section class="section products" id="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Product Solutions</p>
+            <h2>三大專業照護方案</h2>
+          </div>
+          <p>從清潔到隔離保護，建立連續、溫和且容易執行的皮膚照護流程。</p>
+        </div>
 
-      <div class="product-grid">
-        <article class="product-card">
-          <span class="number">01</span>
-          <h3>傷口清潔慕斯</h3>
-          <p>以溫和方式協助清潔皮膚與照護區域，降低摩擦與不適，提升日常照護效率。</p>
-          <span class="tag">溫和清潔</span>
-        </article>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <div class="product-art art-mousse">
+              <span class="product-index">01</span>
+              <div class="bottle bottle-foam">
+                <div class="pump"></div>
+                <div class="label">
+                  <small>WOUND CARE</small>
+                  <strong>潔淨慕斯</strong>
+                </div>
+              </div>
+            </div>
+            <div class="product-body">
+              <p class="product-type">CLEAN</p>
+              <h3>泰陞傷口清潔慕斯</h3>
+              <p>以溫和方式協助清潔照護區域，減少反覆擦拭造成的摩擦，提升日常照護效率。</p>
+              <ul>
+                <li>適用日常皮膚與傷口周邊清潔</li>
+                <li>適合機構及居家照護流程</li>
+              </ul>
+              <a href="#contact">索取產品資料 <span>→</span></a>
+            </div>
+          </article>
 
-        <article class="product-card featured">
-          <span class="number">02</span>
-          <h3>IAD 失禁性皮膚炎照護</h3>
-          <p>針對失禁相關皮膚問題，提供適合尿布族群及臥床長者的日常清潔與皮膚管理方案。</p>
-          <span class="tag">重點照護</span>
-        </article>
+          <article class="product-card featured reveal delay-1">
+            <div class="featured-label">CORE SOLUTION</div>
+            <div class="product-art art-iad">
+              <span class="product-index">02</span>
+              <div class="iad-symbol">
+                <span></span>
+                <strong>IAD</strong>
+                <small>SKIN CARE</small>
+              </div>
+            </div>
+            <div class="product-body">
+              <p class="product-type">CARE</p>
+              <h3>失禁性皮膚炎照護</h3>
+              <p>針對尿布族群與臥床長者，整合清潔、乾爽與皮膚隔離保護的一站式照護方案。</p>
+              <ul>
+                <li>建立標準化照護步驟</li>
+                <li>適用醫療、長照及居家場域</li>
+              </ul>
+              <a href="#contact">規劃機構導入 <span>→</span></a>
+            </div>
+          </article>
 
-        <article class="product-card">
-          <span class="number">03</span>
-          <h3>無痛隱形保護膜</h3>
-          <p>形成透明隔離保護層，協助減少濕氣、排泄物與摩擦對脆弱皮膚造成的刺激。</p>
-          <span class="tag">隔離保護</span>
-        </article>
+          <article class="product-card reveal delay-2">
+            <div class="product-art art-film">
+              <span class="product-index">03</span>
+              <div class="bottle bottle-film">
+                <div class="cap"></div>
+                <div class="label">
+                  <small>BARRIER FILM</small>
+                  <strong>隱形保護膜</strong>
+                </div>
+              </div>
+              <div class="shield"></div>
+            </div>
+            <div class="product-body">
+              <p class="product-type">PROTECT</p>
+              <h3>無痛隱形保護膜</h3>
+              <p>於皮膚表面形成透明隔離層，協助降低濕氣、排泄物與摩擦對脆弱皮膚的刺激。</p>
+              <ul>
+                <li>透明、不影響皮膚觀察</li>
+                <li>適合脆弱與高風險皮膚管理</li>
+              </ul>
+              <a href="#contact">了解使用方式 <span>→</span></a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section care" id="care">
-      <div class="care-panel">
-        <p class="eyebrow">Our Commitment</p>
-        <h2>從產品到流程，支持第一線照護</h2>
-        <p>我們不只提供產品，也重視正確使用方式、臨床教育與機構導入。未來網站將持續加入產品型錄、照護指引及教育資料，方便專業人員快速取得資訊。</p>
+    <section class="section process">
+      <div class="container process-panel reveal">
+        <div class="process-copy">
+          <p class="eyebrow light">Care Workflow</p>
+          <h2>清潔、乾爽、隔離保護</h2>
+          <p>將照護拆解成清楚的三個步驟，讓照護人員更容易執行，也有助於機構建立一致的工作流程。</p>
+          <a class="btn btn-light" href="#contact">洽詢完整照護方案</a>
+        </div>
+
+        <div class="process-steps">
+          <article>
+            <span>01</span>
+            <div><strong>溫和清潔</strong><p>去除髒污，避免過度摩擦。</p></div>
+          </article>
+          <article>
+            <span>02</span>
+            <div><strong>維持乾爽</strong><p>降低長時間潮濕造成的不適。</p></div>
+          </article>
+          <article>
+            <span>03</span>
+            <div><strong>隔離保護</strong><p>建立透明保護層，減少外界刺激。</p></div>
+          </article>
+        </div>
       </div>
-      <div class="care-list">
-        <div><strong>醫院</strong><span>一般病房、慢性病房、呼吸照護病房</span></div>
-        <div><strong>長照</strong><span>護理之家、養護中心、住宿型機構</span></div>
-        <div><strong>居家</strong><span>居家護理所、家庭照顧者與個案</span></div>
+    </section>
+
+    <section class="section solutions" id="solutions">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Clinical Applications</p>
+            <h2>適用多元照護場域</h2>
+          </div>
+          <p>依照不同場域的人力配置、個案特性與照護流程，提供合適的產品組合與導入建議。</p>
+        </div>
+
+        <div class="solution-grid">
+          <article class="solution-card reveal">
+            <div class="icon-box">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M15 54V18h34v36M10 54h44M24 18V10h16v8M27 30h10M32 25v10M21 43h6M37 43h6M21 50h6M37 50h6"/></svg>
+            </div>
+            <span>01</span>
+            <h3>醫院病房</h3>
+            <p>一般病房、慢性病房、呼吸照護病房與高風險皮膚照護。</p>
+          </article>
+
+          <article class="solution-card reveal delay-1">
+            <div class="icon-box">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 30 32 12l22 18M16 27v27h32V27M25 54V39h14v15M23 31h18"/></svg>
+            </div>
+            <span>02</span>
+            <h3>居家護理所</h3>
+            <p>支援護理人員到宅服務，建立容易攜帶與操作的照護組合。</p>
+          </article>
+
+          <article class="solution-card reveal delay-2">
+            <div class="icon-box">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M15 54V22h34v32M22 22v-8h20v8M21 32h22M21 41h22M21 50h22M29 32v18M37 32v18"/></svg>
+            </div>
+            <span>03</span>
+            <h3>護理之家</h3>
+            <p>協助機構建立標準化照護流程，降低不同班別執行差異。</p>
+          </article>
+
+          <article class="solution-card reveal delay-3">
+            <div class="icon-box">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 54s20-10 20-27c0-8-5-13-12-13-4 0-7 2-8 5-2-3-5-5-9-5-7 0-12 5-12 13 0 17 21 27 21 27Z"/></svg>
+            </div>
+            <span>04</span>
+            <h3>長照與居家</h3>
+            <p>提供照顧者清楚、簡單且可持續執行的日常皮膚照護方式。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section resources" id="resources">
+      <div class="container resource-grid">
+        <div class="resource-copy reveal">
+          <p class="eyebrow">Clinical Resources</p>
+          <h2>不只提供產品，<br>也提供照護知識</h2>
+          <p>我們將持續整理照護流程、產品型錄、臨床教育簡報與機構推廣資料，讓第一線人員更容易取得實用資訊。</p>
+          <a class="btn btn-primary" href="#contact">索取教育與產品資料</a>
+        </div>
+
+        <div class="resource-list reveal delay-1">
+          <article>
+            <span>PDF</span>
+            <div><strong>產品型錄</strong><p>產品特色、規格與應用方式</p></div>
+            <i>→</i>
+          </article>
+          <article>
+            <span>CARE</span>
+            <div><strong>照護流程</strong><p>清潔、乾爽與隔離保護步驟</p></div>
+            <i>→</i>
+          </article>
+          <article>
+            <span>EDU</span>
+            <div><strong>教育訓練</strong><p>適合醫院與長照機構的教學內容</p></div>
+            <i>→</i>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section contact" id="contact">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2>歡迎與義光生醫聯絡</h2>
-        <p>產品合作、機構導入、教育訓練與照護方案諮詢，歡迎來電洽詢。</p>
+      <div class="container contact-card reveal">
+        <div class="contact-main">
+          <p class="eyebrow light">Contact Us</p>
+          <h2>一起打造更安心的照護流程</h2>
+          <p>產品合作、機構導入、教育訓練與照護方案諮詢，歡迎與義光生醫聯絡。</p>
+
+          <div class="contact-actions">
+            <a class="btn btn-light" href="tel:+886286857190">02-8685-7190</a>
+            <a class="btn btn-outline-light" href="mailto:holylightbiomed@gmail.com">寄送電子郵件</a>
+          </div>
+        </div>
+
+        <address class="contact-info">
+          <div>
+            <span>公司</span>
+            <strong>義光生醫有限公司</strong>
+            <small>Holy Light Biomedical Co., Ltd.</small>
+          </div>
+          <div>
+            <span>地址</span>
+            <strong>新北市樹林區信和街49巷10號6樓</strong>
+          </div>
+          <div>
+            <span>電話</span>
+            <a href="tel:+886286857190">02-8685-7190</a>
+          </div>
+          <div>
+            <span>Email</span>
+            <a href="mailto:holylightbiomed@gmail.com">holylightbiomed@gmail.com</a>
+          </div>
+        </address>
       </div>
-      <address>
-        <p><strong>義光生醫有限公司</strong></p>
-        <p>Holy Light Biomedical Co., Ltd.</p>
-        <p>新北市樹林區信和街49巷10號6樓</p>
-        <p><a href="tel:+886286857190">02-8685-7190</a></p>
-        <p><a href="mailto:holylightbiomed@gmail.com">holylightbiomed@gmail.com</a></p>
-      </address>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 Holy Light Biomedical Co., Ltd. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a class="brand footer-brand" href="#top">
+        <img src="assets/hlb-mark.svg" alt="" width="46" height="46">
+        <span class="brand-copy">
+          <strong>義光生醫</strong>
+          <small>HOLY LIGHT BIOMEDICAL</small>
+        </span>
+      </a>
+      <p>專業傷口與皮膚照護解決方案</p>
+      <p>© <span id="year"></span> Holy Light Biomedical Co., Ltd.</p>
+    </div>
   </footer>
+
+  <button class="back-to-top" aria-label="回到頁面頂端">↑</button>
 </body>
 </html>
