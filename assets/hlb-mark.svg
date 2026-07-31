@@ -1,10 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title">
-<title>Holy Light Biomedical</title>
-<rect width="180" height="180" rx="38" fill="#d9203f"/>
-<circle cx="90" cy="90" r="66" fill="#f3ce3c"/>
-<circle cx="90" cy="90" r="50" fill="#fff"/>
-<circle cx="90" cy="90" r="43" fill="none" stroke="#d9203f" stroke-width="5"/>
-<path d="M90 44v85M76 58h28M82 129h16" fill="none" stroke="#298159" stroke-width="8" stroke-linecap="round"/>
-<path d="M104 66c-24 4-25 19-7 24 18 5 15 20-7 25-15 4-18 13-7 21" fill="none" stroke="#298159" stroke-width="7" stroke-linecap="round"/>
-<path d="M105 61c8-6 13-2 10 5-2 5-6 7-11 5" fill="#298159"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Holy Light Biomed Logo</title>
+  <desc id="desc">Red outer ring, yellow middle ring, white center, green arched company name fully inside the white circle, and green Rod of Asclepius.</desc>
+
+  <defs>
+    <!-- The text arc is intentionally smaller and lower so all letters remain inside the white circle. -->
+    <path id="textArc" d="M 380 515 A 220 220 0 0 1 820 515"/>
+  </defs>
+
+  <rect width="1200" height="1200" fill="#ffffff"/>
+
+  <!-- Three concentric circles -->
+  <circle cx="600" cy="600" r="535" fill="#f20d18"/>
+  <circle cx="600" cy="600" r="430" fill="#ffe000"/>
+  <circle cx="600" cy="600" r="335" fill="#ffffff"/>
+
+  <!-- Green company name, fully contained in the white center -->
+  <text fill="#0b7f36"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="48"
+        font-weight="700"
+        letter-spacing="0">
+    <textPath href="#textArc" startOffset="50%" text-anchor="middle">Holy Light Biomed</textPath>
+  </text>
+
+  <!-- Green staff -->
+  <line x1="600" y1="495" x2="600" y2="865"
+        stroke="#0b7f36" stroke-width="38" stroke-linecap="round"/>
+
+  <!-- Green snake body -->
+  <path d="M 675 535
+           C 635 485, 555 480, 515 530
+           C 470 585, 500 640, 575 653
+           C 660 668, 695 715, 655 760
+           C 620 800, 565 800, 540 835"
+        fill="none"
+        stroke="#0b7f36"
+        stroke-width="40"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- Snake head -->
+  <path d="M 670 523
+           C 702 505, 742 514, 756 542
+           C 765 562, 744 580, 718 578
+           C 692 576, 674 558, 670 523 Z"
+        fill="#0b7f36"/>
+
+  <!-- Eye and forked tongue -->
+  <circle cx="729" cy="544" r="8" fill="#ffffff"/>
+  <path d="M 754 553 L 780 553 L 797 543
+           M 780 553 L 797 563"
+        fill="none"
+        stroke="#0b7f36"
+        stroke-width="7"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
 </svg>
