@@ -1,7 +1,7 @@
 <svg viewBox="0 0 405 403" xmlns="http://www.w3.org/2000/svg">
   <circle cx="205" cy="205" r="177" fill="#FE0000"/>
-  <circle cx="205" cy="205" r="132.5" fill="#FFFF00"/>
-  <circle cx="205" cy="205" r="88" fill="#FFFFFF"/>
+  <circle cx="205" cy="205" r="134" fill="#FFFF00"/>
+  <circle cx="205" cy="205" r="90" fill="#FFFFFF"/>
   <g transform="translate(0,118) scale(0.25)">
   <g transform="translate(0.000000,272.000000) scale(0.100000,-0.100000)"
 fill="#029037" stroke="none">
@@ -209,3 +209,5 @@ M7829 599 c-7 -13 -14 -57 -17 -97 -4 -66 -7 -74 -28 -83 -13 -4 -24 -13 -24
         fill="none" stroke="#029037" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
+
+ 
