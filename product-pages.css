@@ -21,3 +21,17 @@ section{padding:70px 0}.alt{background:white}.grid{display:grid;grid-template-co
 .notice{margin-top:26px;background:#fff1f5;border-left:4px solid var(--wine);padding:16px 20px;border-radius:10px}
 footer{background:#172722;color:white;padding:40px 0}
 @media(max-width:800px){.hero-grid,.grid,.product-list{grid-template-columns:1fr}.links a:not(.cta){display:none}}
+.product-photo{
+    background:#ffffff;
+    padding:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.product-photo img{
+    width:100%;
+    max-width:420px;
+    height:auto;
+    object-fit:contain;
+}
