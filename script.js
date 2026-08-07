@@ -1,38 +1,86 @@
-const header=document.querySelector('.site-header'),menu=document.querySelector('.menu-toggle'),nav=document.querySelector('.main-nav'),topBtn=document.querySelector('.back-to-top');function s(){header.classList.toggle('scrolled',scrollY>20);topBtn.classList.toggle('show',scrollY>600)}addEventListener('scroll',s,{passive:true});s();menu.addEventListener('click',()=>{const o=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!o));nav.classList.toggle('open',!o)});document.querySelectorAll('.main-nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));topBtn.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));document.getElementById('year').textContent=new Date().getFullYear();
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('#product-grid article');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".main-nav");
 
-  if (cards.length >= 2) {
-    cards[0].setAttribute(
-      'data-search',
-      '傷口保護清潔慕斯 L3-023 300ml pH5.5 Poloxamer 188'
-    );
+  if (menuButton && nav) {
+    menuButton.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(open));
+    });
 
-    cards[0].innerHTML = `
-      <div class="card-icon">＋</div>
-      <span>L3-023｜300ml</span>
-      <h3>傷口保護清潔慕斯</h3>
-      <p>
-        pH5.5 弱酸、免沖洗泡沫，含 Poloxamer 188、
-        玻尿酸、胺基酸與 CMC。
-      </p>
-      <a href="wound-cleansing-mousse.html">查看產品介紹 →</a>
-    `;
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 
-    cards[1].setAttribute(
-      'data-search',
-      '無痛隱形保膚膜 L1-006 100ml 矽氧烷 透氣 防水'
-    );
+  const revealItems = document.querySelectorAll(".reveal");
 
-    cards[1].innerHTML = `
-      <div class="card-icon">◇</div>
-      <span>L1-006｜100ml</span>
-      <h3>無痛隱形保膚膜</h3>
-      <p>
-        醫療級矽氧烷噴塗成膜，具透氣防水特性，
-        含泛醇 B5 與維生素 E。
-      </p>
-      <a href="barrier-film.html">查看產品介紹 →</a>
-    `;
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.13 });
+
+    revealItems.forEach(item => observer.observe(item));
+  } else {
+    revealItems.forEach(item => item.classList.add("visible"));
+  }
+
+  const searchInput = document.querySelector("#site-search");
+  const searchableCards = document.querySelectorAll(".searchable-grid article");
+  const emptyMessage = document.querySelector("#search-empty");
+
+  if (searchInput && searchableCards.length) {
+    searchInput.addEventListener("input", () => {
+      const keyword = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      searchableCards.forEach(card => {
+        const content = `${card.textContent} ${card.dataset.search || ""}`.toLowerCase();
+        const visible = !keyword || content.includes(keyword);
+        card.hidden = !visible;
+        if (visible) visibleCount += 1;
+      });
+
+      if (emptyMessage) emptyMessage.hidden = visibleCount > 0;
+    });
+  }
+
+  const toast = document.querySelector("#toast");
+  let toastTimer;
+
+  document.querySelectorAll("[data-coming]").forEach(button => {
+    button.addEventListener("click", () => {
+      if (!toast) return;
+      toast.textContent = button.dataset.coming || "資料準備中";
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("show"), 2400);
+    });
+  });
+
+  const year = document.querySelector("#year");
+  if (year) year.textContent = new Date().getFullYear();
+
+  const backToTop = document.querySelector(".back-to-top");
+
+  if (backToTop) {
+    const toggleButton = () => {
+      backToTop.classList.toggle("show", window.scrollY > 650);
+    };
+
+    window.addEventListener("scroll", toggleButton, { passive: true });
+    toggleButton();
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   }
 });
