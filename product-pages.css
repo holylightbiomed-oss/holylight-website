@@ -275,3 +275,165 @@ footer{padding:38px 0;background:#142822;color:#fff}
     animation: none;
   }
 }
+.barrier-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(219,232,255,.72), transparent 31%),
+    linear-gradient(135deg, #fff 0%, #f7f9ff 57%, #eef8f5 100%);
+}
+
+.barrier-orb-a {
+  width: 320px;
+  height: 320px;
+  left: -120px;
+  bottom: -120px;
+  background: #dff2eb;
+}
+
+.barrier-orb-b {
+  width: 190px;
+  height: 190px;
+  right: 8%;
+  top: 12%;
+  background: #dfe7ff;
+}
+
+.barrier-stage {
+  position: relative;
+  min-height: 520px;
+  border-radius: 42px;
+  background: linear-gradient(155deg, #fff, #eef3ff);
+  box-shadow: var(--shadow);
+  display: grid;
+  place-items: center;
+  padding: 48px;
+  overflow: hidden;
+}
+
+.barrier-stage img {
+  position: relative;
+  z-index: 3;
+  max-height: 400px;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 24px rgba(0,0,0,.15));
+  animation: barrierProductFloat 4.6s ease-in-out infinite;
+}
+
+.film-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(91,110,180,.20);
+  background: rgba(255,255,255,.28);
+  backdrop-filter: blur(3px);
+}
+
+.ring-1 {
+  width: 250px;
+  height: 250px;
+  right: -45px;
+  top: 30px;
+  animation: ringFloatOne 7s ease-in-out infinite;
+}
+
+.ring-2 {
+  width: 145px;
+  height: 145px;
+  left: 20px;
+  bottom: 60px;
+  animation: ringFloatTwo 5.4s ease-in-out infinite;
+}
+
+.ring-3 {
+  width: 70px;
+  height: 70px;
+  right: 70px;
+  bottom: 38px;
+  animation: ringFloatOne 4.2s ease-in-out infinite reverse;
+}
+
+@keyframes barrierProductFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-13px) rotate(-.7deg);
+  }
+}
+
+@keyframes ringFloatOne {
+  0%, 100% {
+    transform: translate(0,0) scale(1);
+  }
+  50% {
+    transform: translate(-12px,-16px) scale(1.04);
+  }
+}
+
+@keyframes ringFloatTwo {
+  0%, 100% {
+    transform: translate(0,0);
+  }
+  50% {
+    transform: translate(10px,-13px);
+  }
+}
+
+/* 保護膜頁 Hero 進場 */
+.barrier-hero .hero-copy.visible {
+  animation: barrierTextEnter .9s ease both;
+}
+
+.barrier-hero .hero-visual.visible {
+  animation: barrierVisualEnter 1.05s ease .12s both;
+}
+
+@keyframes barrierTextEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-34px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes barrierVisualEnter {
+  from {
+    opacity: 0;
+    transform: translateX(42px) scale(.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@media (max-width: 980px) {
+  .barrier-stage {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 640px) {
+  .barrier-stage {
+    min-height: 330px;
+    padding: 26px;
+  }
+
+  .barrier-stage img {
+    max-height: 270px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .barrier-stage img,
+  .ring-1,
+  .ring-2,
+  .ring-3,
+  .barrier-hero .hero-copy.visible,
+  .barrier-hero .hero-visual.visible {
+    animation: none;
+  }
+}
