@@ -10,3 +10,15 @@ section{padding:78px 0}.hero{background:radial-gradient(circle at 82% 18%,#f5dce
 .cta-section{padding-top:0}.cta-panel{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;border-radius:30px;padding:42px;background:linear-gradient(135deg,var(--wine),#6f1730);color:#fff}.cta-panel h2{margin-top:0}.cta-links{display:flex;flex-direction:column;gap:14px;align-items:flex-start}.light-btn{background:#fff;color:var(--wine)}.light-btn:hover{background:#fff;color:var(--wine-dark)}.phone-link{color:#fff;font-size:1.25rem;font-weight:800}footer{background:#172722;color:#fff;padding:38px 0}.footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-grid a{color:#fff}
 @media(max-width:860px){.hero-grid,.two-column,.product-info-panel,.cta-panel{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.workflow{grid-template-columns:1fr 1fr}.workflow article:after{display:none}.fact-grid{grid-template-columns:1fr 1fr}.fact-grid article:nth-child(2){border-right:none}.fact-grid article:nth-child(-n+2){border-bottom:1px solid var(--line)}.links a:not(.cta){display:none}.visual{min-height:340px}}
 @media(max-width:560px){.container{width:min(100% - 28px,1120px)}.brand img{width:50px;height:50px}.brand strong{font-size:1.18rem}.brand small{font-size:.62rem}.hero{padding-top:56px}.grid,.setting-grid,.workflow,.fact-grid,.product-info-panel dl{grid-template-columns:1fr}.fact-grid article{border-right:none;border-bottom:1px solid var(--line)}.fact-grid article:last-child{border-bottom:none}.visual{min-height:300px;padding:22px}.product-info-panel,.cta-panel{padding:28px}}
+
+
+.hero-copy{color:var(--muted);max-width:650px}
+.composition-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.composition-list span{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;font-weight:700}
+.care-flow{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.care-flow span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:12px 18px;font-weight:700}
+.care-flow i{font-style:normal;color:var(--wine);font-weight:900}
+.faq-section details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-bottom:12px}
+.faq-section summary{cursor:pointer;font-weight:800}
+.faq-section details p{color:var(--muted);margin-bottom:0}
+@media(max-width:560px){.composition-list{grid-template-columns:1fr}.care-flow{display:grid}.care-flow i{text-align:center;transform:rotate(90deg)}}
