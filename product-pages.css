@@ -190,3 +190,88 @@ footer{padding:38px 0;background:#142822;color:#fff}
   *{scroll-behavior:auto!important}
   .reveal{opacity:1;transform:none;transition:none}
 }
+/* V5.1 Hero 持續動畫 */
+
+.product-stage img {
+  animation: productFloat 4.5s ease-in-out infinite;
+}
+
+.bubble-1 {
+  animation: bubbleFloatOne 6s ease-in-out infinite;
+}
+
+.bubble-2 {
+  animation: bubbleFloatTwo 5s ease-in-out infinite;
+}
+
+.bubble-3 {
+  animation: bubbleFloatOne 4s ease-in-out infinite reverse;
+}
+
+.hero-copy.visible {
+  animation: heroTextEnter 0.9s ease both;
+}
+
+.hero-visual.visible {
+  animation: heroImageEnter 1.1s ease 0.15s both;
+}
+
+@keyframes productFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(0.8deg);
+  }
+}
+
+@keyframes bubbleFloatOne {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-10px, -18px) scale(1.06);
+  }
+}
+
+@keyframes bubbleFloatTwo {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(12px, -14px);
+  }
+}
+
+@keyframes heroTextEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroImageEnter {
+  from {
+    opacity: 0;
+    transform: translateX(45px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-stage img,
+  .bubble-1,
+  .bubble-2,
+  .bubble-3,
+  .hero-copy.visible,
+  .hero-visual.visible {
+    animation: none;
+  }
+}
