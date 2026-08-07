@@ -16,8 +16,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="products-hub.css?v=6">
-  <script defer src="products-hub.js?v=6"></script>
+  <link rel="stylesheet" href="products-hub.css?v=6.5">
+  <script defer src="products-hub.js?v=6.5"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">跳至主要內容</a>
@@ -28,65 +28,56 @@
       <img src="assets/hlb-mark.svg?v=3.5" alt="義光生醫標誌">
       <span><strong>義光生醫</strong><small>HOLY LIGHT BIOMEDICAL</small></span>
     </a>
-
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
       <span></span><span></span><span></span>
     </button>
-
     <nav id="primary-nav" class="nav-links" aria-label="主要導覽">
       <a href="index.html">首頁</a>
       <a href="products.html" aria-current="page">產品介紹</a>
       <a href="#care-system">照護理念</a>
       <a href="#product-series">產品系列</a>
+      <a href="#applications">應用場域</a>
       <a class="nav-cta" href="mailto:info@hlb.com.tw?subject=義光生醫產品洽詢">聯絡我們</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <!-- 第一區：Hero -->
   <section class="hub-hero">
-    <div class="hero-orb orb-a"></div>
-    <div class="hero-orb orb-b"></div>
-    <div class="hero-orb orb-c"></div>
-
+    <div class="mesh mesh-one"></div><div class="mesh mesh-two"></div>
+    <div class="hero-orb orb-a"></div><div class="hero-orb orb-b"></div><div class="hero-orb orb-c"></div>
     <div class="container hero-grid">
       <div class="hero-copy reveal">
         <p class="eyebrow">TAICEND SKIN CARE SERIES</p>
         <h1>Professional Skin<br>Protection Solutions</h1>
         <p class="zh-title">專業皮膚照護解決方案</p>
         <p class="lead">從溫和清潔到皮膚保護，提供醫療、長照與居家照護所需的皮膚照護產品。</p>
-
         <div class="hero-actions">
-          <a class="btn primary" href="#product-series">探索產品</a>
-          <a class="btn ghost" href="mailto:info@hlb.com.tw?subject=義光生醫產品洽詢">聯絡我們</a>
+          <a class="btn primary ripple" href="#product-series">探索產品</a>
+          <a class="btn ghost ripple" href="mailto:info@hlb.com.tw?subject=義光生醫產品洽詢">聯絡我們</a>
         </div>
-
         <p class="brand-line">專業皮膚保護，從溫和清潔開始。</p>
       </div>
 
       <div class="hero-products reveal delay-1" aria-label="TAICEND 主力產品">
-        <div class="glass-stage">
-          <div class="float-ring ring-a"></div>
-          <div class="float-ring ring-b"></div>
-          <div class="float-bubble bubble-a"></div>
-          <div class="float-bubble bubble-b"></div>
-
-          <a class="hero-product mousse-product" href="wound-cleansing-mousse.html">
+        <div class="glass-stage parallax-stage">
+          <div class="stage-shine"></div>
+          <div class="float-ring ring-a"></div><div class="float-ring ring-b"></div>
+          <div class="float-bubble bubble-a"></div><div class="float-bubble bubble-b"></div>
+          <a class="hero-product mousse-product parallax-item" data-depth="18" href="wound-cleansing-mousse.html">
             <span class="product-caption"><small>CLEANSING</small><strong>傷口保護清潔慕斯</strong></span>
             <img src="assets/wound-cleansing-mousse.png?v=5" alt="TAICEND 傷口保護清潔慕斯">
           </a>
-
-          <a class="hero-product film-product" href="barrier-film.html">
+          <a class="hero-product film-product parallax-item" data-depth="28" href="barrier-film.html">
             <span class="product-caption"><small>PROTECTION</small><strong>無痛隱形保膚膜</strong></span>
             <img src="assets/barrier-film.png?v=2" alt="TAICEND 無痛隱形保膚膜">
           </a>
+          <div class="stage-label"><span>Cleanse</span><i></i><span>Protect</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 第二區：照護理念 -->
   <section class="section care-system" id="care-system">
     <div class="container">
       <div class="section-head reveal">
@@ -94,40 +85,15 @@
         <h2>清潔與保護，是一套完整照護流程</h2>
         <p>義光生醫以產品、照護流程與教育支援為核心，協助合作夥伴建立清楚且容易執行的皮膚照護方式。</p>
       </div>
-
       <div class="value-grid">
-        <article class="value-card reveal">
-          <div class="value-number">01</div>
-          <p class="value-en">Gentle Cleansing</p>
-          <h3>溫和清潔</h3>
-          <p>從清潔開始，降低照護流程中的不必要刺激。</p>
-        </article>
-
-        <article class="value-card reveal delay-1">
-          <div class="value-number">02</div>
-          <p class="value-en">Skin Protection</p>
-          <h3>皮膚保護</h3>
-          <p>完成清潔後，依照護需求建立皮膚保護步驟。</p>
-        </article>
-
-        <article class="value-card reveal delay-2">
-          <div class="value-number">03</div>
-          <p class="value-en">Professional Care</p>
-          <h3>專業照護</h3>
-          <p>服務醫院、居家護理與長照機構等不同照護場域。</p>
-        </article>
-
-        <article class="value-card reveal delay-3">
-          <div class="value-number">04</div>
-          <p class="value-en">Education Support</p>
-          <h3>教育支援</h3>
-          <p>協助建立產品使用、照護流程與教育訓練內容。</p>
-        </article>
+        <article class="value-card reveal"><div class="value-number">01</div><p class="value-en">Gentle Cleansing</p><h3>溫和清潔</h3><p>從清潔開始，降低照護流程中的不必要刺激。</p></article>
+        <article class="value-card reveal delay-1"><div class="value-number">02</div><p class="value-en">Skin Protection</p><h3>皮膚保護</h3><p>完成清潔後，依照護需求建立皮膚保護步驟。</p></article>
+        <article class="value-card reveal delay-2"><div class="value-number">03</div><p class="value-en">Professional Care</p><h3>專業照護</h3><p>服務醫院、居家護理與長照機構等不同照護場域。</p></article>
+        <article class="value-card reveal delay-3"><div class="value-number">04</div><p class="value-en">Education Support</p><h3>教育支援</h3><p>協助建立產品使用、照護流程與教育訓練內容。</p></article>
       </div>
     </div>
   </section>
 
-  <!-- 第三區：產品系列 -->
   <section class="section product-series" id="product-series">
     <div class="container">
       <div class="section-head reveal">
@@ -135,63 +101,71 @@
         <h2>TAICEND 專業皮膚照護系列</h2>
         <p>兩項產品分別對應清潔與保護，建立清楚的照護產品架構。</p>
       </div>
-
       <div class="product-grid">
-        <article class="product-card mousse-card reveal">
-          <div class="product-card-top">
-            <div>
-              <p class="product-brand">TAICEND</p>
-              <h3>傷口保護清潔慕斯</h3>
-              <p class="product-subtitle">Wound Cleansing Mousse</p>
-            </div>
-            <span class="product-code">L3-023｜300ml</span>
-          </div>
-
-          <a class="product-image-wrap" href="wound-cleansing-mousse.html" aria-label="查看傷口保護清潔慕斯">
-            <div class="image-glow"></div>
-            <img src="assets/wound-cleansing-mousse.png?v=5" alt="傷口保護清潔慕斯產品照片">
-          </a>
-
-          <div class="product-tags">
-            <span>pH5.5</span>
-            <span>免沖洗</span>
-            <span>泡沫型態</span>
-          </div>
-
+        <article class="product-card mousse-card reveal spotlight-card">
+          <div class="card-light"></div>
+          <div class="product-card-top"><div><p class="product-brand">TAICEND</p><h3>傷口保護清潔慕斯</h3><p class="product-subtitle">Wound Cleansing Mousse</p></div><span class="product-code">L3-023｜300ml</span></div>
+          <a class="product-image-wrap" href="wound-cleansing-mousse.html"><div class="image-glow"></div><div class="image-pedestal"></div><img src="assets/wound-cleansing-mousse.png?v=5" alt="傷口保護清潔慕斯產品照片"></a>
+          <div class="product-tags"><span>pH5.5</span><span>免沖洗</span><span>泡沫型態</span></div>
           <p class="product-description">pH5.5 弱酸、免沖洗泡沫，提供皮膚與傷口部位清潔的產品選擇。</p>
-
-          <a class="product-link" href="wound-cleansing-mousse.html">了解更多 <span>→</span></a>
+          <div class="product-actions"><a class="product-link ripple" href="wound-cleansing-mousse.html">了解產品 <span>→</span></a><a class="text-link" href="mailto:info@hlb.com.tw?subject=傷口保護清潔慕斯型錄洽詢">索取型錄</a></div>
         </article>
 
-        <article class="product-card film-card reveal delay-1">
-          <div class="product-card-top">
-            <div>
-              <p class="product-brand">TAICEND</p>
-              <h3>無痛隱形保膚膜</h3>
-              <p class="product-subtitle">Invisible Barrier Film</p>
-            </div>
-            <span class="product-code">L1-006｜100ml</span>
-          </div>
-
-          <a class="product-image-wrap" href="barrier-film.html" aria-label="查看無痛隱形保膚膜">
-            <div class="image-glow"></div>
-            <img src="assets/barrier-film.png?v=2" alt="無痛隱形保膚膜產品照片">
-          </a>
-
-          <div class="product-tags">
-            <span>透明成膜</span>
-            <span>透氣防水</span>
-            <span>醫療級矽氧烷</span>
-          </div>
-
+        <article class="product-card film-card reveal delay-1 spotlight-card">
+          <div class="card-light"></div>
+          <div class="product-card-top"><div><p class="product-brand">TAICEND</p><h3>無痛隱形保膚膜</h3><p class="product-subtitle">Invisible Barrier Film</p></div><span class="product-code">L1-006｜100ml</span></div>
+          <a class="product-image-wrap" href="barrier-film.html"><div class="image-glow"></div><div class="image-pedestal"></div><img src="assets/barrier-film.png?v=2" alt="無痛隱形保膚膜產品照片"></a>
+          <div class="product-tags"><span>透明成膜</span><span>透氣防水</span><span>醫療級矽氧烷</span></div>
           <p class="product-description">醫療級矽氧烷噴塗成膜，提供透氣、防水與皮膚保護的產品選擇。</p>
-
-          <a class="product-link" href="barrier-film.html">了解更多 <span>→</span></a>
+          <div class="product-actions"><a class="product-link ripple" href="barrier-film.html">了解產品 <span>→</span></a><a class="text-link" href="mailto:info@hlb.com.tw?subject=無痛隱形保膚膜型錄洽詢">索取型錄</a></div>
         </article>
       </div>
+      <div class="regulatory-note reveal">產品資訊依目前型錄整理；實際使用方式與注意事項請以產品標示、核准文件及醫療專業人員指示為準。</div>
+    </div>
+  </section>
 
-      <div class="regulatory-note reveal">
-        產品資訊依目前型錄整理；實際使用方式與注意事項請以產品標示、核准文件及醫療專業人員指示為準。
+  <section class="section workflow" id="workflow">
+    <div class="container workflow-grid">
+      <div class="section-head reveal">
+        <p class="eyebrow">CARE PATHWAY</p>
+        <h2>從皮膚評估到清潔與保護</h2>
+        <p>以清楚步驟呈現兩項產品在照護流程中的位置；實際使用仍應依產品標示與專業判斷。</p>
+      </div>
+      <div class="pathway reveal delay-1">
+        <div class="path-step active"><span>01</span><strong>皮膚評估</strong><small>Assessment</small></div>
+        <div class="path-line"></div>
+        <div class="path-step"><span>02</span><strong>溫和清潔</strong><small>TAICEND Mousse</small></div>
+        <div class="path-line"></div>
+        <div class="path-step"><span>03</span><strong>確認皮膚狀態</strong><small>Review</small></div>
+        <div class="path-line"></div>
+        <div class="path-step"><span>04</span><strong>建立保護</strong><small>TAICEND Barrier Film</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section applications" id="applications">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">CARE SETTINGS</p>
+        <h2>支援多元專業照護場域</h2>
+        <p>產品可依標示、核准文件及專業人員判斷，納入不同機構的皮膚照護流程。</p>
+      </div>
+      <div class="application-grid">
+        <article class="application-card reveal"><span class="app-icon">＋</span><h3>醫院照護</h3><p>一般病房、慢性照護及相關專業照護場域。</p></article>
+        <article class="application-card reveal delay-1"><span class="app-icon">⌂</span><h3>居家護理</h3><p>協助居家護理團隊建立清楚的照護步驟。</p></article>
+        <article class="application-card reveal delay-2"><span class="app-icon">◎</span><h3>長照機構</h3><p>適合納入機構教育與皮膚照護流程規劃。</p></article>
+        <article class="application-card reveal"><span class="app-icon">◇</span><h3>傷口照護</h3><p>依產品標示及專業評估應用於照護流程。</p></article>
+        <article class="application-card reveal delay-1"><span class="app-icon">○</span><h3>造口周邊照護</h3><p>依皮膚狀態與專業判斷規劃清潔及保護。</p></article>
+        <article class="application-card reveal delay-2"><span class="app-icon">≈</span><h3>失禁相關照護</h3><p>支援清潔與皮膚隔離保護的流程溝通。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-banner">
+    <div class="container">
+      <div class="contact-panel reveal">
+        <div><p class="eyebrow">PROFESSIONAL SUPPORT</p><h2>需要產品資料或照護教育支援？</h2><p>歡迎聯絡義光生醫，洽詢產品型錄、教育簡報與合作方式。</p></div>
+        <div class="contact-actions"><a class="btn primary ripple" href="mailto:info@hlb.com.tw?subject=義光生醫產品與教育支援洽詢">Email 洽詢</a><a class="btn ghost light ripple" href="tel:+886286857190">02-8685-7190</a></div>
       </div>
     </div>
   </section>
@@ -199,17 +173,10 @@
 
 <footer>
   <div class="container footer-grid">
-    <div class="footer-brand">
-      <img src="assets/hlb-mark.svg?v=3.5" alt="">
-      <div><strong>義光生醫有限公司</strong><span>Holy Light Biomedical Co., Ltd.</span></div>
-    </div>
-    <div>
-      <a href="mailto:info@hlb.com.tw">info@hlb.com.tw</a><br>
-      <a href="tel:+886286857190">02-8685-7190</a>
-    </div>
+    <div class="footer-brand"><img src="assets/hlb-mark.svg?v=3.5" alt=""><div><strong>義光生醫有限公司</strong><span>Holy Light Biomedical Co., Ltd.</span></div></div>
+    <div class="footer-contact"><a href="mailto:info@hlb.com.tw">info@hlb.com.tw</a><br><a href="tel:+886286857190">02-8685-7190</a><br><span>新北市樹林區信和街49巷10號6樓</span></div>
   </div>
 </footer>
-
 <button class="back-to-top" type="button" aria-label="回到頁首">↑</button>
 </body>
 </html>
