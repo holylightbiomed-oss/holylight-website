@@ -1,0 +1,8 @@
+# Holy Light Biomedical Co., Ltd.
+# https://hlb.com.tw
+
+User-agent: *
+
+Allow: /
+
+Sitemap: https://hlb.com.tw/sitemap.xml
