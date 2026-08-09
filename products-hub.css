@@ -16,3 +16,13 @@ footer{background:#142822;color:#fff;padding:42px 0}.footer-grid{display:flex;ju
 @media(max-width:760px){.product-grid{grid-template-columns:1fr}.application-grid{grid-template-columns:1fr 1fr}.contact-panel{display:block}.contact-actions{margin-top:24px}.footer-contact{text-align:left}}
 @media(max-width:640px){.container{width:min(100% - 28px,1160px)}.brand img{width:50px;height:50px}.brand strong{font-size:1.15rem}.brand small{font-size:.61rem}.hub-hero{padding-top:58px}.value-grid,.application-grid{grid-template-columns:1fr}.glass-stage{min-height:450px}.mousse-product{left:2%;bottom:40px}.film-product{right:2%;top:50px}.hero-product img{max-height:260px}.film-product img{max-height:235px}.product-caption{min-width:165px;font-size:.8rem}.product-card{padding:24px}.product-card-top{display:block}.product-code{display:inline-block;margin-top:12px}.product-image-wrap{min-height:310px}.product-image-wrap img{max-height:260px}.contact-panel{padding:28px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.reveal{opacity:1;transform:none;transition:none}.mousse-product,.film-product,.ring-a,.ring-b,.bubble-a,.bubble-b,.mesh,.orb-b,.orb-c,.stage-shine{animation:none}}
+/* SEO V2.4.2：Products Hub 主題群集互連 */
+.topic-cluster{background:linear-gradient(180deg,#f8fbfa 0%,#fff 100%)}
+.topic-cluster-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.topic-cluster-card{display:flex;flex-direction:column;min-height:260px;padding:30px;border:1px solid rgba(22,88,80,.14);border-radius:26px;background:#fff;color:inherit;text-decoration:none;box-shadow:0 18px 46px rgba(22,63,58,.08);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.topic-cluster-card:hover{transform:translateY(-5px);border-color:rgba(143,32,64,.28);box-shadow:0 24px 58px rgba(22,63,58,.12)}
+.topic-cluster-card small{font-family:Manrope,sans-serif;letter-spacing:.12em;font-weight:800;color:#0a625d}
+.topic-cluster-card h3{margin:.65rem 0 .75rem;font-size:clamp(1.35rem,2.4vw,2rem)}
+.topic-cluster-card p{margin:0 0 22px;color:var(--muted,#61706d);line-height:1.8}
+.topic-cluster-card strong{margin-top:auto;color:#8f2040}
+@media(max-width:760px){.topic-cluster-grid{grid-template-columns:1fr}.topic-cluster-card{min-height:auto}}
