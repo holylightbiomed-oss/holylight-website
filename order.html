@@ -414,6 +414,16 @@
   </div>
 </footer>
 <script>
+  const params = new URLSearchParams(window.location.search);
+const product = params.get('product');
+
+if (product === 'mousse') {
+  document.getElementById('mousseQty').value = 1;
+}
+
+if (product === 'film') {
+  document.getElementById('filmQty').value = 1;
+}
  const orderForm = document.getElementById('orderForm');
 const submitBtn = orderForm.querySelector('.submit-btn');
 
