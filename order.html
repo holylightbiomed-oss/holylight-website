@@ -414,18 +414,23 @@
   </div>
 </footer>
 <script>
-  const orderForm = document.getElementById('orderForm');
+ const orderForm = document.getElementById('orderForm');
+const submitBtn = orderForm.querySelector('.submit-btn');
 
-  orderForm.addEventListener('submit', function (event) {
-    const mousseQty = Number(document.getElementById('mousseQty').value || 0);
-    const filmQty = Number(document.getElementById('filmQty').value || 0);
+orderForm.addEventListener('submit', function (event) {
+  const mousseQty = Number(document.getElementById('mousseQty').value || 0);
+  const filmQty = Number(document.getElementById('filmQty').value || 0);
 
-    if (mousseQty <= 0 && filmQty <= 0) {
-      event.preventDefault();
-      alert('請至少選擇一項產品，並輸入訂購數量。');
-      return;
-    }
-  });
+  if (mousseQty <= 0 && filmQty <= 0) {
+    event.preventDefault();
+    alert('請至少選擇一項產品，並輸入訂購數量。');
+    return;
+  }
+
+  // 防止重複送出
+  submitBtn.disabled = true;
+  submitBtn.textContent = '訂購需求送出中…';
+});
 </script>
 </body>
 </html>
