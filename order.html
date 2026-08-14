@@ -309,7 +309,15 @@
           </div>
           <div class="qty">
             <label for="mousseQty">數量</label>
-            <input id="mousseQty" name="mousseQty" type="number" min="0" value="0">
+           <input
+  id="mousseQty"
+  name="mousseQty"
+  type="number"
+  min="0"
+  step="1"
+  value="0"
+  form="orderForm"
+>
           </div>
         </div>
 
@@ -321,7 +329,15 @@
           </div>
           <div class="qty">
             <label for="filmQty">數量</label>
-            <input id="filmQty" name="filmQty" type="number" min="0" value="0">
+           <input
+  id="filmQty"
+  name="filmQty"
+  type="number"
+  min="0"
+  step="1"
+  value="0"
+  form="orderForm"
+>
           </div>
         </div>
 
@@ -333,7 +349,11 @@
       <section class="panel">
         <h2>訂購人資料</h2>
 
-        <form id="orderForm">
+       <form
+  id="orderForm"
+  action="https://script.google.com/macros/s/AKfycbxFqKIIGQLjZoD_KFxQ0234WXUaSPlEpf1o17JHTce8p3tOc39OIGT0qNeCe4b3AFZI/exec"
+  method="post"
+>
           <div class="form-grid">
 
             <div class="field">
@@ -373,13 +393,13 @@
 
           </div>
 
-          <button class="submit-btn" type="submit" disabled>
+        <button class="submit-btn" type="submit">
             送出訂購需求
           </button>
 
-          <div class="notice">
-            HLB Order V1.0 第一階段尚未接上訂單傳送後端，因此目前按鈕先停用。
-          </div>
+         <div class="notice">
+  送出後將建立訂購需求紀錄，義光生醫收到資料後會再與您確認價格、庫存、運費與出貨資訊。
+</div>
         </form>
       </section>
 
@@ -393,6 +413,19 @@
     義光生醫有限公司 Holy Light Biomedical Co., Ltd. ｜ 02-8685-7190
   </div>
 </footer>
+<script>
+  const orderForm = document.getElementById('orderForm');
 
+  orderForm.addEventListener('submit', function (event) {
+    const mousseQty = Number(document.getElementById('mousseQty').value || 0);
+    const filmQty = Number(document.getElementById('filmQty').value || 0);
+
+    if (mousseQty <= 0 && filmQty <= 0) {
+      event.preventDefault();
+      alert('請至少選擇一項產品，並輸入訂購數量。');
+      return;
+    }
+  });
+</script>
 </body>
 </html>
