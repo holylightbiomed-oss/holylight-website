@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#9d2443">
+
+  <title>產品訂購｜義光生醫</title>
+  <meta name="description" content="義光生醫產品訂購頁，可選擇 TAICEND 傷口保護清潔慕斯與無痛隱形保膚膜，填寫訂購數量與聯絡資料。">
+  <meta name="robots" content="noindex,follow">
+  <meta name="author" content="義光生醫有限公司">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", sans-serif;
+      color: #243238;
+      background: #f7f8f8;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid #e5e8e8;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav-wrap {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .brand span {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand strong { font-size: 1.1rem; }
+    .brand small { font-size: .68rem; letter-spacing: .08em; }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 64px 0 36px;
+      background: linear-gradient(135deg,#fff,#f6eaee);
+    }
+
+    .eyebrow {
+      color: #9d2443;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+    }
+
+    h1 {
+      font-size: clamp(2rem,5vw,3.4rem);
+      line-height: 1.15;
+      margin: 10px 0 16px;
+    }
+
+    .lead {
+      max-width: 760px;
+      font-size: 1.08rem;
+      color: #526066;
+    }
+
+    .order-section {
+      padding: 48px 0 72px;
+    }
+
+    .order-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .panel {
+      background: #fff;
+      border: 1px solid #e3e7e7;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 14px 40px rgba(20,40,40,.06);
+    }
+
+    .panel h2 {
+      margin-top: 0;
+      font-size: 1.45rem;
+    }
+
+    .product-row {
+      display: grid;
+      grid-template-columns: 86px 1fr 110px;
+      gap: 18px;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #edf0f0;
+    }
+
+    .product-row:last-child { border-bottom: 0; }
+
+    .product-row img {
+      width: 86px;
+      height: 86px;
+      object-fit: contain;
+    }
+
+    .product-row h3 {
+      margin: 0 0 5px;
+      font-size: 1rem;
+    }
+
+    .product-row p {
+      margin: 0;
+      color: #6a7478;
+      font-size: .9rem;
+    }
+
+    .qty {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .qty label {
+      font-size: .78rem;
+      color: #697378;
+    }
+
+    .qty input {
+      width: 100%;
+      padding: 11px;
+      border: 1px solid #ccd3d3;
+      border-radius: 10px;
+      font: inherit;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+    }
+
+    .field label {
+      font-size: .88rem;
+      font-weight: 700;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      border: 1px solid #ccd3d3;
+      border-radius: 11px;
+      padding: 12px 13px;
+      font: inherit;
+      background: #fff;
+    }
+
+    .field textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 14px 16px;
+      background: #f7f1f3;
+      border-radius: 12px;
+      color: #67545a;
+      font-size: .88rem;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      padding: 14px 18px;
+      background: #9d2443;
+      color: #fff;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .submit-btn:disabled {
+      opacity: .55;
+      cursor: not-allowed;
+    }
+
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid #e4e8e8;
+      background: #fff;
+      color: #667176;
+      font-size: .88rem;
+    }
+
+    @media (max-width: 800px) {
+      .nav-links { display: none; }
+
+      .order-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-row {
+        grid-template-columns: 70px 1fr;
+      }
+
+      .product-row img {
+        width: 70px;
+        height: 70px;
+      }
+
+      .qty {
+        grid-column: 2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="義光生醫首頁">
+      <img src="assets/hlb-mark.svg?v=3.5" alt="義光生醫標誌">
+      <span>
+        <strong>義光生醫</strong>
+        <small>HOLY LIGHT BIOMEDICAL</small>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="主要導覽">
+      <a href="/">首頁</a>
+      <a href="products.html">產品中心</a>
+      <a href="iad-clinical-center.html">IAD 專區</a>
+      <a href="long-term-care-center.html">長照皮膚照護</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">HLB ORDER CENTER</p>
+      <h1>產品訂購</h1>
+      <p class="lead">
+        選擇需要的產品與數量，填寫機構及聯絡資料後送出訂購需求。
+        義光生醫收到資料後，將再與您確認訂購內容、價格、運送及出貨資訊。
+      </p>
+    </div>
+  </section>
+
+  <section class="order-section">
+    <div class="container order-grid">
+
+      <section class="panel">
+        <h2>選擇產品與數量</h2>
+
+        <div class="product-row">
+          <img src="assets/wound-cleansing-mousse.png" alt="TAICEND 傷口保護清潔慕斯">
+          <div>
+            <h3>TAICEND 傷口保護清潔慕斯</h3>
+            <p>L3-023・300ml・未滅菌</p>
+          </div>
+          <div class="qty">
+            <label for="mousseQty">數量</label>
+            <input id="mousseQty" name="mousseQty" type="number" min="0" value="0">
+          </div>
+        </div>
+
+        <div class="product-row">
+          <img src="assets/barrier-film.png" alt="TAICEND 無痛隱形保膚膜">
+          <div>
+            <h3>TAICEND 無痛隱形保膚膜</h3>
+            <p>L1-006・100ml</p>
+          </div>
+          <div class="qty">
+            <label for="filmQty">數量</label>
+            <input id="filmQty" name="filmQty" type="number" min="0" value="0">
+          </div>
+        </div>
+
+        <div class="notice">
+          此頁目前為訂購需求單，送出後不代表訂單已成立；實際價格、庫存、運費與出貨時間將由義光生醫確認。
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>訂購人資料</h2>
+
+        <form id="orderForm">
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="organization">機構／公司名稱 *</label>
+              <input id="organization" name="organization" required>
+            </div>
+
+            <div class="field">
+              <label for="contact">聯絡人 *</label>
+              <input id="contact" name="contact" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">電話 *</label>
+              <input id="phone" name="phone" type="tel" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+
+            <div class="field">
+              <label for="taxId">統一編號</label>
+              <input id="taxId" name="taxId">
+            </div>
+
+            <div class="field">
+              <label for="address">配送地址</label>
+              <input id="address" name="address">
+            </div>
+
+            <div class="field">
+              <label for="note">備註</label>
+              <textarea id="note" name="note" placeholder="例如：希望聯絡時間、機構採購需求、發票資訊等"></textarea>
+            </div>
+
+          </div>
+
+          <button class="submit-btn" type="submit" disabled>
+            送出訂購需求
+          </button>
+
+          <div class="notice">
+            HLB Order V1.0 第一階段尚未接上訂單傳送後端，因此目前按鈕先停用。
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    義光生醫有限公司 Holy Light Biomedical Co., Ltd. ｜ 02-8685-7190
+  </div>
+</footer>
+
+</body>
+</html>
