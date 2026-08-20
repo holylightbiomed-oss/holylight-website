@@ -475,3 +475,30 @@ footer{padding:38px 0;background:#142822;color:#fff}
     border-radius: 16px;
   }
 }
+.video-section {
+  background: #fff;
+}
+
+.video-wrapper {
+  position: relative;
+  width: min(960px, 100%);
+  margin: 32px auto 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(20, 40, 40, 0.12);
+  background: #000;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .video-wrapper {
+    border-radius: 16px;
+  }
+}
